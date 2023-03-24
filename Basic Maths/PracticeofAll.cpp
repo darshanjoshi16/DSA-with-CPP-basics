@@ -121,6 +121,22 @@ void isArmStrongNum(int N)
     }
 }
 
+//defining the function for printing the divisiors with brute force approach
+void PrintAlldivisiorsBrute(int N)
+{
+    cout << "Print All Divisors (Brute Force)" << endl;
+    cout << "==============================================="<<endl;
+    for(int i = 1; i<= N; i++)
+    {
+        if(N % i == 0)
+        {
+            cout << i << " ";
+        }
+    }
+}
+
+//================================================================================================================================================
+
 //declaring the main function
 int main()
 {

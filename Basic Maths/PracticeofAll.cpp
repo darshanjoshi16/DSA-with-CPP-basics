@@ -87,6 +87,40 @@ void isPalindrome(int N)
     }
 }
 
+//we will implement the function for checking if given number is armstrong number or not 
+void isArmStrongNum(int N)
+{
+    cout << "=======================================" << endl;
+    cout << "Armstrong Number Checking";
+    //defining the duplicate variable for storing the original number copy
+    int dup = N;
+    
+    //defining the sum variable which will be storing the value of digits raised to 3 and summation of all digit cubes
+    int sum = 0;
+    
+    //defining the variable to store the last digit
+    int ld;
+    
+    
+    //running the loop for untill N becomes completely divided
+    while(N > 0)
+    {
+        ld = N % 10;
+        sum = sum + (ld*ld*ld);
+        N = N /10;
+    }
+    
+    //checking if the result of sum is equal to original number
+    if(sum == dup)
+    {
+        cout << "The Number is ArmStrong";
+    }
+    else
+    {
+        cout << "The Number is not Armstrong";
+    }
+}
+
 //declaring the main function
 int main()
 {

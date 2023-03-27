@@ -205,6 +205,49 @@ void CheckingPrimeOptimized(int N)
     if(FactorCount == 2) { cout << "The Given Number is Prime";}
     else{cout << "The Given number is not prime";}
 }
+
+//defining the function for performing the GCD of given 2 number using brute force approach where TC = O(min(a,b))
+void GCDBrute(int N1,int N2)
+{
+    //we will determine the variable for storing the minimum among the given input
+    int minimum = min(N1,N2);
+
+    //we will determine the variable for keeping the track of GCD
+    int gcd;
+
+    //we will run the loop for the value of minimum variable as it would be enough
+    for(int i=1 ; i<=minimum; i++)
+    {
+        //we will check the condition for GCD
+        if(N1 % i == 0 && N2 % i == 0)
+        {
+            //assign the value to gcd variable
+            gcd = i;
+        }
+    }
+
+    //printing the value of GCD
+    cout << "The GCD for " << N1 << " and " << N2 << "is : " << gcd;
+
+}
+
+//defining the function for performing the GCD of given 2 number using the optimized approach where TC = O(log(min(a,b)))
+void GCDEuclidiean(int N1,int N2)
+{
+    //running the loop untill one of the input becomes 0
+    while(N1>0 && N2>0)
+    {
+        //we will reduce the number by taking modulous of greater % smaller
+        if(N1 > N2){N1 = N1 % N2;}
+        else{N2 = N2 % N1;}  
+
+    }
+
+    //now whenever the any of the variable becomes 0 then, the other value is GCD
+    if(N1 == 0) {cout << "The GCD for " << N1 << " and " << N2 << "is : " << N2; }
+    else{cout << "The GCD for " << N1 << " and " << N2 << "is : " << N1;}
+    
+}
 //================================================================================================================================================
 
 //declaring the main function
@@ -214,10 +257,22 @@ int main()
     cout << "======================================" << endl;
     
     //we will apply the common input for all the practice
-    int N;
+    int N1;
     cout << "Please Enter the number:";
-    cin >> N;
-    
+    cin >> N1;
+
+    cout << "Do we need to perform GCD here?: ";
+    string answer;
+    cin >> string;
+
+    if(answer == 'Y' || answer == 'YES' || answer == 'Yes')
+    {
+        //incase we need to perform GCD function
+        int N2;
+        cout << "Please Enter another number:";
+        cin >> N2;
+    }
+        
     //calling the function as per the requirement
     
     

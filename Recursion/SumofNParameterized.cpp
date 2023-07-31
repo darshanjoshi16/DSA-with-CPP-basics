@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-//sum of First N number using the parameterized functional apporach in recursion
+//sum of First N number using the parameterized  apporach in recursion
 void sumofN(int i, int sum,int N)
 {
     if(i > N)

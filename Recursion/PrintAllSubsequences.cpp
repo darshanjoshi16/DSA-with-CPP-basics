@@ -53,11 +53,32 @@ void printAll(int index, vector<int> &store, int arr[], int N)
 }
 int main()
 {
-    int arr[] = {3,2,1,4};
-    int N = 4;
-    vector <int> store;
-    
-    //calling the function to print the subsequences
-    printAll(0,store, arr,N);
-    return 0;
+   int N;
+   cout << "Enter number of elements you want to add into the array: ";
+   cin >> N;
+   int arr[N];
+   
+   cout << "==================================================================\n";
+   for(int i = 0; i <= N-1; i++)
+   {
+       int ele;
+       cout << "Enter the value: ";
+       cin >> ele;
+       arr[i] = ele;
+   }
+   
+   cout << "==========================================================\n";
+   
+   //printing the original array
+   for(auto it: arr)
+   {
+       cout << it << " ";
+   }
+   
+   cout << "\n============================================================\n";
+   
+   //for printing all the subsequences
+   vector<int> store;
+   printAll(0,store,arr,N);
+   
 }

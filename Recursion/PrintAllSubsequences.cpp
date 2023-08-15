@@ -13,8 +13,8 @@
     {2}
     {3}
     {}
-    {1,2,3} - {3,2,1} -> Is not a valid subsequence as this does not follow the order
-    
+    {1,2,3} - {3,2,1} -> Is not a valid subsequence as this does not follow the order in the arr index
+
 */
 
 
